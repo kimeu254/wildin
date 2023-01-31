@@ -14,6 +14,17 @@
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
         <style>
+            :root {
+                --primary: #ffee59;
+                --secondary: #525368;
+                --light: #E8F5E9;
+                --dark: black;
+            }
+
+            body {
+                background: white;
+            }
+
             /* Extra small devices (phones, 600px and down) */
             @media only screen and (max-width: 600px) {
                 .navbar {
@@ -37,6 +48,10 @@
 
             /* Large devices (laptops/desktops, 992px and up) */
             @media only screen and (min-width: 992px) {
+                .footer {
+                    display: none;
+                }
+
                 .navbar {
                     display: block
                 }
@@ -44,10 +59,105 @@
 
             /* Extra large devices (large laptops and desktops, 1200px and up) */
             @media only screen and (min-width: 1200px) {
+                .footer {
+                    display: none;
+                }
+
                 .navbar {
                     display: block
                 }
             }
+
+            /*** Navbar ***/
+            .navbar.sticky-top {
+                top: -100px;
+                transition: .5s;
+            }
+
+            /* .navbar .navbar-brand,
+            .navbar a.btn {
+                height: 80px
+            } */
+
+            .navbar .navbar-nav .nav-link {
+                margin-right: 35px;
+                padding: 10px 15px;
+                color: var(--dark);
+                font-size: 20px;
+                font-weight: 500;
+                outline: none;
+            }
+
+            .navbar .navbar-nav .nav-link.active {
+                color: var(--primary);
+                border-bottom: 2px solid #ffee10
+            }
+
+            .navbar .navbar-nav .nav-link:hover {
+                color: #B2BEB5
+            }
+
+            .navbar .dropdown-toggle::after {
+                border: none;
+                content: "\f107";
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                vertical-align: middle;
+                margin-left: 8px;
+            }
+
+            @media (max-width: 991.98px) {
+                .navbar .navbar-nav .nav-link  {
+                    margin-right: 0;
+                    padding: 10px 0;
+                }
+
+                .navbar .navbar-nav {
+                    border-top: 1px solid #EEEEEE;
+                }
+            }
+
+            @media (min-width: 992px) {
+                .navbar .nav-item .dropdown-menu {
+                    display: block;
+                    border: none;
+                    margin-top: 0;
+                    top: 150%;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: .5s;
+                }
+
+                .navbar .nav-item:hover .dropdown-menu {
+                    top: 100%;
+                    visibility: visible;
+                    transition: .5s;
+                    opacity: 1;
+                }
+            }
+
+            .footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                color: black;
+            }
+
+            .foot-nav {
+                display: flex;
+                align-items: center;
+                justify-content:space-between   
+            }
+
+            .foot-nav .nav-item {
+                font-size: 20px
+            }
+
+            .foot-nav .nav-item.active {
+                color: #ffee59
+            }
+
         </style>
         
     </head>
@@ -55,10 +165,10 @@
        <div id="app">
 
         <!-- Navbar Start -->
-        <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 shadow-sm">
             <div class="container">
                 <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-                    <h1 class="m-0">Gardener</h1>
+                    <h1 class="m-0">Wildin'</h1>
                 </a>
                 <div class="navbar-nav ms-auto p-4 p-lg-0">
                     <a href="index.html" class="nav-item nav-link active">
@@ -89,6 +199,25 @@
             </div>
         </nav>
         <!-- Navbar End -->
+
+        <div class="footer shadow-lg">
+            <div class="container">
+                <div class="foot-nav p-4">
+                    <a href="index.html" class="nav-item nav-link active">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                    </a>
+                    <a href="about.html" class="nav-item nav-link">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </a>
+                    <a href="service.html" class="nav-item nav-link">
+                        <i class="fa fa-commenting" aria-hidden="true"></i>
+                    </a>
+                    <a href="project.html" class="nav-item nav-link">
+                        <i class="fa fa-bell" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
        </div>
     </body>
 </html>
