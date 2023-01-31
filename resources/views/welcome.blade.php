@@ -194,11 +194,31 @@
                 color: white;
             }
 
+            /*** Spinner ***/
+            #spinner {
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity .5s ease-out, visibility 0s linear .5s;
+                z-index: 99999;
+            }
+
+            #spinner.show {
+                transition: opacity .5s ease-out, visibility 0s linear 0s;
+                visibility: visible;
+                opacity: 1;
+            }
+
         </style>
         
     </head>
     <body>
        <div id="app">
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+        </div>
+        <!-- Spinner End -->
 
         <!-- Navbar Start -->
         <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 shadow-sm">
@@ -286,5 +306,21 @@
         <a href="#" class="btn btn-lg btn-wildin btn-lg-square rounded-circle post-story"><i class="fa fa-plus"></i></a>
 
        </div>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+       <script type="text/javascript">
+            (function ($) {
+                "use strict";
+            
+                // Spinner
+                var spinner = function () {
+                    setTimeout(function () {
+                        if ($('#spinner').length > 0) {
+                            $('#spinner').removeClass('show');
+                        }
+                    }, 3000);
+                };
+                spinner();
+            })(jQuery);
+        </script>
     </body>
 </html>
