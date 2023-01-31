@@ -30,12 +30,26 @@
                 .navbar {
                     display: none
                 }
+
+                .post-story {
+                    position: fixed;
+                    right: 20px;
+                    bottom: 100px;
+                    z-index: 99;
+                }
             }
 
             /* Small devices (portrait tablets and large phones, 600px and up) */
             @media only screen and (min-width: 600px) {
                 .navbar {
                     display: none
+                }
+
+                .post-story {
+                    position: fixed;
+                    right: 20px;
+                    bottom: 100px;
+                    z-index: 99;
                 }
             }
 
@@ -44,11 +58,18 @@
                 .navbar {
                     display: none
                 }
+
+                .post-story {
+                    position: fixed;
+                    right: 65px;
+                    bottom: 150px;
+                    z-index: 99;
+                }
             }
 
             /* Large devices (laptops/desktops, 992px and up) */
             @media only screen and (min-width: 992px) {
-                .footer, .nav {
+                .footer, .nav, .post-story {
                     display: none;
                 }
 
@@ -59,7 +80,7 @@
 
             /* Extra large devices (large laptops and desktops, 1200px and up) */
             @media only screen and (min-width: 1200px) {
-                .footer, .nav {
+                .footer, .nav, .post-story {
                     display: none;
                 }
 
@@ -168,6 +189,11 @@
                 --bs-offcanvas-width: min(95vw, 300px) !important;
             }
 
+            .btn-wildin {
+                background: #ffee59;
+                color: white;
+            }
+
         </style>
         
     </head>
@@ -255,6 +281,9 @@
             </div>
         </div>
         <!-- Bottom-Nav End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-wildin btn-lg-square rounded-circle post-story"><i class="fa fa-plus"></i></a>
 
        </div>
     </body>
