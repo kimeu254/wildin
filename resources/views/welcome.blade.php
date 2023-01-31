@@ -48,7 +48,7 @@
 
             /* Large devices (laptops/desktops, 992px and up) */
             @media only screen and (min-width: 992px) {
-                .footer {
+                .footer, .nav {
                     display: none;
                 }
 
@@ -59,7 +59,7 @@
 
             /* Extra large devices (large laptops and desktops, 1200px and up) */
             @media only screen and (min-width: 1200px) {
-                .footer {
+                .footer, .nav {
                     display: none;
                 }
 
@@ -158,6 +158,16 @@
                 color: #ffee59
             }
 
+            .nav .top-nav {
+                display: flex;
+                align-items: center;
+                justify-content:space-between 
+            }
+
+            .offcanvas-size-sm {
+                --bs-offcanvas-width: min(95vw, 300px) !important;
+            }
+
         </style>
         
     </head>
@@ -200,6 +210,32 @@
         </nav>
         <!-- Navbar End -->
 
+        <!-- Navbar-md Start -->
+        <div class="nav shadow-sm">
+            <div class="container top-nav p-3">
+                <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+                    <h1 class="m-0">Wildin'</h1>
+                </a>
+                <div data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    <img src="" alt="profile-pic" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        <!-- Navbar-md End -->
+
+        <!-- Offcanvas Start -->
+        <div class="offcanvas offcanvas-end offcanvas-size-sm" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+              <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              ...
+            </div>
+          </div>
+        <!-- Offcanvas End -->
+
+        <!-- Bottom-Nav Start -->
         <div class="footer shadow-lg">
             <div class="container">
                 <div class="foot-nav p-4">
@@ -218,6 +254,8 @@
                 </div>
             </div>
         </div>
+        <!-- Bottom-Nav End -->
+
        </div>
     </body>
 </html>
