@@ -1,0 +1,175 @@
+html, body {
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px; }
+  
+  .text-divider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    line-height: 14px;
+    margin: 30px 0; }
+    .text-divider:before {
+      content: '';
+      display: block;
+      height: 1px;
+      flex: 1;
+      background: #b3b3b3;
+      margin-right: 10px; }
+    .text-divider:after {
+      content: '';
+      display: block;
+      height: 1px;
+      flex: 1;
+      background: #b3b3b3;
+      margin-left: 10px; }
+  
+  .btn {
+    font-size: 15px;
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    padding: 15px 30px;
+    line-height: 14px;
+    border-radius: .5rem; }
+    .btn.btn-sm {
+      padding: 12px 20px;
+      font-size: 12px; }
+    .btn.btn-lg {
+      padding: 20px 40px;
+      font-size: 16px; }
+    .btn.btn-block {
+      width: 100%;
+      justify-content: center; }
+    .btn.btn-white {
+      background: white;
+      color: black; }
+      .btn.btn-white:hover, .btn.btn-white:focus {
+        background: rgba(255, 255, 255, 0.8); }
+    .btn.btn-floating {
+      height: 50px;
+      width: 50px;
+      padding: 0;
+      font-size: 18px !important;
+      justify-content: center;
+      border-radius: 50%; }
+      .btn.btn-floating.btn-sm {
+        height: 35px;
+        width: 35px;
+        font-size: 14px !important; }
+      .btn.btn-floating.btn-lg {
+        height: 65px;
+        width: 65px;
+        font-size: 22px !important; }
+
+  .form-control {
+    font-size: 14px;
+    transition: all .3s; }
+  
+  .custom-checkbox {
+    user-select: none; }
+  
+  .form-wrapper {
+    padding: 30px 20px;
+    min-height: 100%; }
+    .form-wrapper .container, .form-wrapper .container-fluid {
+      min-height: 100%; }
+  
+  @media (max-width: 500px) {
+    .form-wrapper {
+      display: block !important;
+      padding: 20px 10px !important; }
+    body {
+        background: #fff;
+    }
+    }
+  
+  html, body {
+    
+    background-attachment: fixed; }
+  
+  .form-wrapper {
+    display: flex;
+    align-items: center;
+    min-height: 100%; }
+    .form-wrapper .container {
+      min-height: 100%; }
+  
+  a {
+    color: #525368; text-decoration: none; font-weight: 600;}
+    a:hover, a:focus {
+      color: #ffee59; }
+
+  input[type=checkbox] {
+        accent-color: #ffee59;}
+
+  .btn-primary {
+    background: #ffee59 !important;
+    border: none;
+    border-radius: 10px !important; }
+  
+  .custom-control-input:checked ~ .custom-control-label::before {
+    background: linear-gradient(90deg, #ff4955, #673ab7) !important;
+    border: none; }
+  
+  .logo {
+    text-align: center; }
+  
+  .card {
+    border: none;
+    width: 400px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.16); }
+    .card .card-body {
+      padding: 30px; }
+  
+  .form-group {
+    margin-bottom: 20px; }
+    .form-group .form-icon-wrapper {
+      position: relative; }
+      .form-group .form-icon-wrapper .form-icon-left, .form-group .form-icon-wrapper .form-icon-right {
+        padding: 0;
+        transform: translateY(-50%);
+        top: 50%;
+        font-size: 16px;
+        border: none;
+        position: absolute;
+        z-index: 4;
+        background: none;
+        transition: opacity .3s;
+        color: black; }
+      .form-group .form-icon-wrapper .form-icon-left {
+        left: 15px; }
+      .form-group .form-icon-wrapper .form-icon-right {
+        right: 15px;
+        left: auto; }
+  
+  .form-control {
+    height: auto;
+    padding: 13px 20px;
+    padding-left: 45px;
+    border: none;
+    background: #f2f2f2;
+    border-radius: 10px !important; }
+    .form-control:focus {
+      box-shadow: none;
+      color: black;
+      background: #ebebeb; }
+      .form-control:focus + i {
+        opacity: .8; }
+  
+  @media (max-width: 500px) {
+    .card {
+      width: 100%;
+      box-shadow: none;
+    } }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:focus {
+        transition: background-color 600000s 0s, color 600000s 0s;
+    }
+    input[data-autocompleted] {
+        background-color: transparent !important;
+    }
+  

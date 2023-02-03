@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Wildin'</title>
 
         <!-- Fonts -->
         <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -55,6 +55,15 @@
                             <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                             <a href="quote.html" class="dropdown-item">Quotation</a>
                             <a href="404.html" class="dropdown-item">404 Page</a>
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -86,6 +95,10 @@
             </div>
           </div>
         <!-- Offcanvas End -->
+
+        <main class="py-4">
+            @yield('content')
+        </main>
 
         <!-- Bottom-Nav Start -->
         <div class="footer shadow-lg">
