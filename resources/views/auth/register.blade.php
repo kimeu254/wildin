@@ -9,7 +9,6 @@
                     <img src="../../dist/images/logo-colorful.png" alt="logo">
                 </div>
                 <div class="text-center my-5">
-                    <h3 class="font-weight-bold mb-3">Create Account</h3>
                     <p class="text-muted">You can create a free account now</p>
                 </div>
                 <form method="POST" action="{{ route('register') }}">

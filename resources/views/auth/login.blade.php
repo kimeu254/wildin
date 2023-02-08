@@ -9,16 +9,15 @@
                     <img src="../../dist/images/logo-colorful.png" alt="logo">
                 </div>
                 <div class="my-5 text-center">
-                    <h3 class="font-weight-bold mb-3">Sign In</h3>
-                    <p class="text-muted">Sign in to Latform to continue</p>
+                    <p class="text-muted">Please log in to continue</p>
                 </div>
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
 
                     <div class="form-group">
-                        <label for="email">Email</label>
+                        <label for="email">Email, Phone or Username</label>
                         <div class="form-icon-wrapper">
-                            <input id="email" type="email" placeholder="Enter email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                            <input id="email" type="text" placeholder="Enter email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
