@@ -11,6 +11,10 @@ body {
     background: white;
 }
 
+a {
+    text-decoration: none;
+}
+
 /*** Navbar ***/
 
 .navbar.sticky-top {
@@ -42,12 +46,20 @@ body {
 }
 
 .navbar .dropdown-toggle::after {
-    border: none;
-    content: "\f107";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    vertical-align: middle;
-    margin-left: 8px;
+    display: none;
+}
+
+.navbar .dropdown {
+    position:static !important;
+}
+
+.navbar .nav-item .dropdown-menu {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23) !important;
+    border: 0;
+    margin-top:0px !important;
+    width: 35% !important;
+    margin-left: 53rem !important;
+    padding: 0.7em;
 }
 
 @media (max-width: 991.98px) {
@@ -62,23 +74,49 @@ body {
 }
 
 @media (min-width: 992px) {
-    .navbar .nav-item .dropdown-menu {
+
+    .navbar .nav-item .dropdown-menu .profile {}
+
+    .navbar .nav-item .dropdown-menu .profile .profile-img img {
+        border-radius: 50%;
+        height: 80px;
+        width: 80px;
+        object-fit: cover;
         display: block;
-        border: none;
-        margin-top: 0;
-        top: 150%;
-        opacity: 0;
-        visibility: hidden;
-        transition: .5s;
     }
 
-    .navbar .nav-item:hover .dropdown-menu {
-        top: 100%;
-        visibility: visible;
-        transition: .5s;
-        opacity: 1;
+    .navbar .nav-item .dropdown-menu .profile .username {
+        line-height: 1px;
     }
-}
+
+    .navbar .nav-item .dropdown-menu .profile .username h6 {
+        color: #525368;
+        font-weight: 700;
+    }
+
+    .navbar .nav-item .dropdown-menu .profile .username span {
+        color: #B2BEB5;
+        font-size: small;
+    }
+
+    .navbar .nav-item .dropdown-menu .profile .bio p {
+        font-size: smaller;
+    }
+
+    .navbar .nav-item .dropdown-menu .profile .profile-info {}
+
+    .navbar .nav-item .dropdown-menu .profile .profile-info a {
+        line-height: 1px;
+    }
+
+    .navbar .nav-item .dropdown-menu .profile .profile-info p {
+        color:#B2BEB5;
+    }
+
+    .navbar .nav-item .dropdown-menu .profile .profile-info span {
+        color: #525368;
+    }
+} 
 
 /*** Navbar ***/
 

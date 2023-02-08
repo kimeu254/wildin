@@ -28,7 +28,7 @@
 
         <!-- Navbar Start -->
         <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 shadow-sm">
-            <div class="container">
+            <div class="container-fluid">
                 <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
                     <h1 class="m-0">Wildin'</h1>
                 </a>
@@ -49,21 +49,79 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <i class="fa fa-user" aria-hidden="true"></i>
                         </a>
-                        <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
-                            <a href="feature.html" class="dropdown-item">Features</a>
-                            <a href="team.html" class="dropdown-item">Our Team</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            <a href="quote.html" class="dropdown-item">Quotation</a>
-                            <a href="404.html" class="dropdown-item">404 Page</a>
-                            <a class="dropdown-item" href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
+                        <div class="dropdown-menu bg-white rounded-0 rounded-bottom m-0">
+                            <div class="container">
+                                <div class="row profile py-3 g-0">
+                                    <a href="#" class="col-3 profile-img">
+                                        <img src="https://picsum.photos/200/300" alt="" class="img-fluid">
+                                    </a>
+                                    <div class="col-9">
+                                        <div class="mx-3">
+                                            <div class="username mb-3">
+                                                <a href="#">
+                                                    <h6>JimmyTheMad</h6>
+                                                    <span>@jim254</span>
+                                                </a>
+                                            </div>
+                                            <div class="bio">
+                                                <p>
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row profile-info g-0 text-center">
+                                            <div class="col-4">
+                                                <a href="#">
+                                                    <p>Followers</p>
+                                                    <span>1000</span>
+                                                </a>
+                                            </div>
+                                            <div class="col-4">
+                                                <a href="#">
+                                                    <p>Following</p>
+                                                    <span>1000</span>
+                                                </a>                                        
+                                            </div>
+                                            <div class="col-4">
+                                                <a href="#">
+                                                    <p>Posts</p>
+                                                    <span>1000</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="dropdown-divider">
+                                <a href="#" class="dropdown-item">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    <span>Profile</span>
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <i class="fa fa-cogs" aria-hidden="true"></i>
+                                    <span>Settings & Privacy</span>
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <i class="fa fa-question" aria-hidden="true"></i>
+                                    <span>Help & Support</span>
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <i class="fa fa-moon" aria-hidden="true"></i>
+                                    <span>Display & Accessibility</span>
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <i class="fa fa-comments" aria-hidden="true"></i>
+                                    <span>Feedback</span>
+                                </a>
+                                <a href="{{ route('logout') }}" class="dropdown-item"
+                                    onclick="event.preventDefault();
                                                 document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                            </a>
-
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                @csrf
-                            </form>
+                                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                    <span>Log Out</span>
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
