@@ -91,36 +91,37 @@
                                         </div>
                                     </div>
                                 </div>
-                                <hr class="dropdown-divider">
-                                <a href="#" class="dropdown-item">
-                                    <i class="fa fa-user" aria-hidden="true"></i>
-                                    <span>Profile</span>
-                                </a>
-                                <a href="#" class="dropdown-item">
-                                    <i class="fa fa-cogs" aria-hidden="true"></i>
-                                    <span>Settings & Privacy</span>
-                                </a>
-                                <a href="#" class="dropdown-item">
-                                    <i class="fa fa-question" aria-hidden="true"></i>
-                                    <span>Help & Support</span>
-                                </a>
-                                <a href="#" class="dropdown-item">
-                                    <i class="fa fa-moon" aria-hidden="true"></i>
-                                    <span>Display & Accessibility</span>
-                                </a>
-                                <a href="#" class="dropdown-item">
-                                    <i class="fa fa-comments" aria-hidden="true"></i>
-                                    <span>Feedback</span>
-                                </a>
-                                <a href="{{ route('logout') }}" class="dropdown-item"
-                                    onclick="event.preventDefault();
-                                                document.getElementById('logout-form').submit();">
-                                    <i class="fa fa-sign-out" aria-hidden="true"></i>
-                                    <span>Log Out</span>
-                                </a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
+                                <div class="py-3">
+                                    <a href="#" class="dropdown-item">
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                        <span>Profile</span>
+                                    </a>
+                                    <a href="#" class="dropdown-item">
+                                        <i class="fa fa-cogs" aria-hidden="true"></i>
+                                        <span>Settings & Privacy</span>
+                                    </a>
+                                    <a href="#" class="dropdown-item">
+                                        <i class="fa fa-question" aria-hidden="true"></i>
+                                        <span>Help & Support</span>
+                                    </a>
+                                    <a href="#" class="dropdown-item">
+                                        <i class="fa fa-moon" aria-hidden="true"></i>
+                                        <span>Display & Accessibility</span>
+                                    </a>
+                                    <a href="#" class="dropdown-item">
+                                        <i class="fa fa-comments" aria-hidden="true"></i>
+                                        <span>Feedback</span>
+                                    </a>
+                                    <a href="{{ route('logout') }}" class="dropdown-item"
+                                        onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
+                                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                        <span>Log Out</span>
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>

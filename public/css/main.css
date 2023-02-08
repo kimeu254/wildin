@@ -75,7 +75,9 @@ a {
 
 @media (min-width: 992px) {
 
-    .navbar .nav-item .dropdown-menu .profile {}
+    .navbar .nav-item .dropdown-menu .profile {
+        border-bottom: 1px solid #EEEEEE;
+    }
 
     .navbar .nav-item .dropdown-menu .profile .profile-img img {
         border-radius: 50%;
@@ -116,6 +118,7 @@ a {
     .navbar .nav-item .dropdown-menu .profile .profile-info span {
         color: #525368;
     }
+    
 } 
 
 /*** Navbar ***/
