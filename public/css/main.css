@@ -105,8 +105,6 @@ a {
         font-size: smaller;
     }
 
-    .navbar .nav-item .dropdown-menu .profile .profile-info {}
-
     .navbar .nav-item .dropdown-menu .profile .profile-info a {
         line-height: 1px;
     }
@@ -117,8 +115,23 @@ a {
 
     .navbar .nav-item .dropdown-menu .profile .profile-info span {
         color: #525368;
+        font-weight: 600;
     }
     
+    .navbar .nav-item .dropdown-menu .drop-links .dropdown-item {
+        padding: 10px 0;
+    }
+
+    .navbar .nav-item .dropdown-menu .drop-links .dropdown-item .fa-solid {
+        padding: 15px;
+        background: #B2BEB5;
+        border-radius: 50%;
+    }
+
+    .navbar .nav-item .dropdown-menu .drop-links .dropdown-item span {
+        margin-left: 10px;
+        font-weight: 600;
+    }
 } 
 
 /*** Navbar ***/

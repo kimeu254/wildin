@@ -27,7 +27,7 @@
         <!-- Spinner End -->
 
         <!-- Navbar Start -->
-        <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 shadow-sm">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top p-0 shadow-sm">
             <div class="container-fluid">
                 <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
                     <h1 class="m-0">Wildin'</h1>
@@ -91,31 +91,31 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="py-3">
+                                <div class="py-3 drop-links">
                                     <a href="#" class="dropdown-item">
-                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                        <i class="fa-solid fa-user" aria-hidden="true"></i>
                                         <span>Profile</span>
                                     </a>
                                     <a href="#" class="dropdown-item">
-                                        <i class="fa fa-cogs" aria-hidden="true"></i>
+                                        <i class="fa-solid fa-gears" aria-hidden="true"></i>
                                         <span>Settings & Privacy</span>
                                     </a>
                                     <a href="#" class="dropdown-item">
-                                        <i class="fa fa-question" aria-hidden="true"></i>
+                                        <i class="fa-solid fa-circle-question" aria-hidden="true"></i>
                                         <span>Help & Support</span>
                                     </a>
                                     <a href="#" class="dropdown-item">
-                                        <i class="fa fa-moon" aria-hidden="true"></i>
+                                        <i class="fa-solid fa-display" aria-hidden="true"></i>
                                         <span>Display & Accessibility</span>
                                     </a>
                                     <a href="#" class="dropdown-item">
-                                        <i class="fa fa-comments" aria-hidden="true"></i>
+                                        <i class="fa-solid fa-comments" aria-hidden="true"></i>
                                         <span>Feedback</span>
                                     </a>
                                     <a href="{{ route('logout') }}" class="dropdown-item"
                                         onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();">
-                                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                        <i class="fa-solid fa-sign-out" aria-hidden="true"></i>
                                         <span>Log Out</span>
                                     </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -155,7 +155,7 @@
           </div>
         <!-- Offcanvas End -->
 
-        <main class="py-4">
+        <main class="mt-5 py-4">
             @yield('content')
         </main>
 
