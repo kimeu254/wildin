@@ -33,34 +33,34 @@
                     <h1 class="m-0">Wildin'</h1>
                 </a>
                 <div class="navbar-nav ms-auto p-4 p-lg-0">
-                    <a href="index.html" class="nav-item nav-link active">
+                    <a href="{{ route('home')}}" class="nav-item nav-link {{ Request::is('/') ? 'active' : '' }}">
                         <i class="fa fa-home" aria-hidden="true"></i>
                     </a>
-                    <a href="about.html" class="nav-item nav-link">
+                    <a href="#" class="nav-item nav-link">
                         <i class="fa fa-search" aria-hidden="true"></i>
                     </a>
-                    <a href="service.html" class="nav-item nav-link">
+                    <a href="#" class="nav-item nav-link">
                         <i class="fa fa-commenting" aria-hidden="true"></i>
                     </a>
-                    <a href="project.html" class="nav-item nav-link">
+                    <a href="#" class="nav-item nav-link">
                         <i class="fa fa-bell" aria-hidden="true"></i>
                     </a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle {{ Request::is('profile',Auth::user()->username) ? 'active' : '' }}" data-bs-toggle="dropdown">
                             <i class="fa fa-user" aria-hidden="true"></i>
                         </a>
                         <div class="dropdown-menu bg-white rounded-0 rounded-bottom m-0">
                             <div class="container">
                                 <div class="row profile py-3 g-0">
-                                    <a href="#" class="col-3 profile-img">
+                                    <a href="{{ route('profile',Auth::user()->username) }}" class="col-3 profile-img">
                                         <img src="https://picsum.photos/200/300" alt="" class="img-fluid">
                                     </a>
                                     <div class="col-9">
                                         <div class="mx-3">
                                             <div class="username mb-3">
-                                                <a href="#">
-                                                    <h6>JimmyTheMad</h6>
-                                                    <span>@jim254</span>
+                                                <h6>{{Auth::user()->name}}</h6>
+                                                <a href="{{ route('profile',Auth::user()->username) }}">
+                                                    <span>@</span><span>{{Auth::user()->username}}</span>
                                                 </a>
                                             </div>
                                             <div class="bio">
@@ -92,7 +92,7 @@
                                     </div>
                                 </div>
                                 <div class="py-3 drop-links">
-                                    <a href="#" class="dropdown-item">
+                                    <a href="{{ route('profile',Auth::user()->username) }}" class="dropdown-item">
                                         <i class="fa-solid fa-user" aria-hidden="true"></i>
                                         <span>Profile</span>
                                     </a>

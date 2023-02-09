@@ -60,6 +60,9 @@ a {
     width: 35% !important;
     margin-left: 53rem !important;
     padding: 0.7em;
+    height: auto;
+    max-height: 500px;
+    overflow-x: hidden;
 }
 
 @media (max-width: 991.98px) {
@@ -99,6 +102,10 @@ a {
     .navbar .nav-item .dropdown-menu .profile .username span {
         color: #B2BEB5;
         font-size: small;
+    }
+
+    .navbar .nav-item .dropdown-menu .profile .username a:hover span{
+        color: var(--primary);
     }
 
     .navbar .nav-item .dropdown-menu .profile .bio p {
