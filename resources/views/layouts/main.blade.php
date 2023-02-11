@@ -155,7 +155,7 @@
           </div>
         <!-- Offcanvas End -->
 
-        <main class="mt-5 py-4">
+        <main>
             @yield('content')
         </main>
 
