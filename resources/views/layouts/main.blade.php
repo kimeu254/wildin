@@ -64,9 +64,7 @@
                                                 </a>
                                             </div>
                                             <div class="bio">
-                                                <p>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit...
-                                                </p>
+                                                <p>{{Auth::user()->bio}}</p>
                                             </div>
                                         </div>
                                         <div class="row profile-info g-0 text-center">
@@ -131,13 +129,13 @@
         <!-- Navbar End -->
 
         <!-- Navbar-md Start -->
-        <div class="nav shadow-sm">
+        <div class="nav shadow-sm fixed-top">
             <div class="container top-nav p-3">
                 <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
                     <h1 class="m-0">Wildin'</h1>
                 </a>
                 <div data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                    <img src="" alt="profile-pic" class="img-fluid">
+                    <img src="https://picsum.photos/200/300" alt="profile-pic" class="img-fluid" style="object-fit: cover; border-radius:50%; height:50px; width:50px">
                 </div>
             </div>
         </div>
@@ -146,11 +144,81 @@
         <!-- Offcanvas Start -->
         <div class="offcanvas offcanvas-end offcanvas-size-sm" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
             <div class="offcanvas-header">
-              <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+              <h5 id="offcanvasRightLabel"><i class="fa-solid fa-circle-info"></i><span class="px-3">Account Info</span></h5>
               <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-              ...
+                <div class="container">
+                    <div class="row d-flex align-items-center profile py-3 g-0">
+                        <a href="{{ route('profile',Auth::user()->username) }}" class="col-4 profile-img">
+                            <img src="https://picsum.photos/200/300" alt="" class="img-fluid">
+                        </a>
+                        <div class="col-8">
+                            <div class="mx-3">
+                                <div class="username mb-3">
+                                    <h6>{{Auth::user()->name}}</h6>
+                                    <a href="{{ route('profile',Auth::user()->username) }}">
+                                        <span>@</span><span>{{Auth::user()->username}}</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bio py-2">
+                        <p>{{Auth::user()->bio}}</p>
+                    </div>
+                    <div class="row profile-info g-0 text-center pb-4">
+                        <div class="col-4">
+                            <a href="#">
+                                <p>Followers</p>
+                                <span>1000</span>
+                            </a>
+                        </div>
+                        <div class="col-4">
+                            <a href="#">
+                                <p>Following</p>
+                                <span>1000</span>
+                            </a>                                        
+                        </div>
+                        <div class="col-4">
+                            <a href="#">
+                                <p>Posts</p>
+                                <span>1000</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="py-3 drop-links">
+                        <a href="{{ route('profile',Auth::user()->username) }}" class="dropdown-item">
+                            <i class="fa-solid fa-user" aria-hidden="true"></i>
+                            <span>Profile</span>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <i class="fa-solid fa-gears" aria-hidden="true"></i>
+                            <span>Settings & Privacy</span>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <i class="fa-solid fa-circle-question" aria-hidden="true"></i>
+                            <span>Help & Support</span>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <i class="fa-solid fa-display" aria-hidden="true"></i>
+                            <span>Display & Accessibility</span>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <i class="fa-solid fa-comments" aria-hidden="true"></i>
+                            <span>Feedback</span>
+                        </a>
+                        <a href="{{ route('logout') }}" class="dropdown-item"
+                            onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                            <i class="fa-solid fa-sign-out" aria-hidden="true"></i>
+                            <span>Log Out</span>
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </div>
+                </div>
             </div>
           </div>
         <!-- Offcanvas End -->
@@ -163,16 +231,16 @@
         <div class="footer shadow-lg">
             <div class="container">
                 <div class="foot-nav p-4">
-                    <a href="index.html" class="nav-item nav-link active">
+                    <a href="{{ route('home')}}" class="nav-item nav-link {{ Request::is('/') ? 'active' : '' }}">
                         <i class="fa fa-home" aria-hidden="true"></i>
                     </a>
-                    <a href="about.html" class="nav-item nav-link">
+                    <a href="#" class="nav-item nav-link">
                         <i class="fa fa-search" aria-hidden="true"></i>
                     </a>
-                    <a href="service.html" class="nav-item nav-link">
+                    <a href="#" class="nav-item nav-link">
                         <i class="fa fa-commenting" aria-hidden="true"></i>
                     </a>
-                    <a href="project.html" class="nav-item nav-link">
+                    <a href="#" class="nav-item nav-link">
                         <i class="fa fa-bell" aria-hidden="true"></i>
                     </a>
                 </div>
