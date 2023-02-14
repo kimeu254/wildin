@@ -46,20 +46,20 @@
                         <i class="fa fa-bell" aria-hidden="true"></i>
                     </a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle {{ Request::is('profile',Auth::user()->username) ? 'active' : '' }}" data-bs-toggle="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle {{ Request::is('Profile') ? 'active' : '' }}" data-bs-toggle="dropdown">
                             <i class="fa fa-user" aria-hidden="true"></i>
                         </a>
                         <div class="dropdown-menu bg-white rounded-0 rounded-bottom m-0">
                             <div class="container">
                                 <div class="row profile py-3 g-0">
-                                    <a href="{{ route('profile',Auth::user()->username) }}" class="col-3 profile-img">
+                                    <a href="{{ route('Profile') }}" class="col-3 profile-img">
                                         <img src="https://picsum.photos/200/300" alt="" class="img-fluid">
                                     </a>
                                     <div class="col-9">
                                         <div class="mx-3">
                                             <div class="username mb-3">
                                                 <h6>{{Auth::user()->name}}</h6>
-                                                <a href="{{ route('profile',Auth::user()->username) }}">
+                                                <a href="{{ route('Profile') }}">
                                                     <span>@</span><span>{{Auth::user()->username}}</span>
                                                 </a>
                                             </div>
@@ -90,7 +90,7 @@
                                     </div>
                                 </div>
                                 <div class="py-3 drop-links">
-                                    <a href="{{ route('profile',Auth::user()->username) }}" class="dropdown-item">
+                                    <a href="{{ route('Profile') }}" class="dropdown-item">
                                         <i class="fa-solid fa-user" aria-hidden="true"></i>
                                         <span>Profile</span>
                                     </a>
@@ -150,14 +150,14 @@
             <div class="offcanvas-body">
                 <div class="container">
                     <div class="row d-flex align-items-center profile py-3 g-0">
-                        <a href="{{ route('profile',Auth::user()->username) }}" class="col-4 profile-img">
+                        <a href="{{ route('Profile') }}" class="col-4 profile-img">
                             <img src="https://picsum.photos/200/300" alt="" class="img-fluid">
                         </a>
                         <div class="col-8">
                             <div class="mx-3">
                                 <div class="username mb-3">
                                     <h6>{{Auth::user()->name}}</h6>
-                                    <a href="{{ route('profile',Auth::user()->username) }}">
+                                    <a href="{{ route('Profile') }}">
                                         <span>@</span><span>{{Auth::user()->username}}</span>
                                     </a>
                                 </div>
@@ -188,7 +188,7 @@
                         </div>
                     </div>
                     <div class="py-3 drop-links">
-                        <a href="{{ route('profile',Auth::user()->username) }}" class="dropdown-item">
+                        <a href="{{ route('Profile') }}" class="dropdown-item">
                             <i class="fa-solid fa-user" aria-hidden="true"></i>
                             <span>Profile</span>
                         </a>

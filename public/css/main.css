@@ -15,6 +15,11 @@ a {
     text-decoration: none;
 }
 
+img {
+    object-fit: cover;
+    cursor: pointer;
+}
+
 .form-control:focus {
     border-color: #B2BEB5 !important;
     box-shadow: 0 0 5px #B2BEB5 !important;
@@ -313,40 +318,28 @@ label {
         margin-top: 80px;
     }
 
-    .profile-page {
-        min-height:380px;
+    .profile-page .top-profile {
+        min-height:200px
     }
 
-    .profile-page .cover .cover-img img {
+    .profile-page .top-profile .cover img {
         height: 150px;
     }
 
-    .profile-page .cover .profile-pic {
-        left:5%; bottom:-30%;
+    .profile-page .top-profile .profile-pic {
+        top:45%; left:2%;
     }
 
-    .profile-page .cover .profile-pic img {
-        height:70px; width:70px;
+    .profile-page .top-profile .profile-pic img {
+        height:100px; width:100px;
     }
 
-    .profile-page .cover .profile-pic-edit {
-        left:20%; top:108%; padding: 1px 5px;
+    .profile-page .top-profile .edit-cover {
+        right:2%; top:55%
     }
 
-    .profile-page .cover .profile-pic-edit .fa-camera {
-        font-size:0.8rem;
-    }
-
-    .profile-page .cover .edit-cover {
-        top:75%; right:2%;
-    }
-
-    .profile-page .cover .edit-profile {
-        top:110%; right:0
-    }
-
-    .profile-page .cover .profile-data {
-        left:0; top:135%;
+    .profile-page .top-profile .edit-profile {
+        right:2%; top:80%
     }
 
 }
@@ -368,40 +361,28 @@ label {
         margin-top: 80px;
     }
 
-    .profile-page {
-        min-height:370px;
+    .profile-page .top-profile {
+        min-height:250px
     }
 
-    .profile-page .cover .cover-img img {
-        height: 150px;
+    .profile-page .top-profile .cover img {
+        height: 200px;
     }
 
-    .profile-page .cover .profile-pic {
-        left:10%; bottom:-30%;
+    .profile-page .top-profile .profile-pic {
+        top:45%; left:2%;
     }
 
-    .profile-page .cover .profile-pic img {
-        height:80px; width:80px;
+    .profile-page .top-profile .profile-pic img {
+        height:120px; width:120px;
     }
 
-    .profile-page .cover .profile-pic-edit {
-        left:22%; top:108%; padding: 1px 5px;
+    .profile-page .top-profile .edit-cover {
+        right:2%; top:65%
     }
 
-    .profile-page .cover .profile-pic-edit .fa-camera {
-        font-size:0.8rem;
-    }
-
-    .profile-page .cover .edit-cover {
-        top:75%; right:2%;
-    }
-
-    .profile-page .cover .edit-profile {
-        top:110%; right:0
-    }
-
-    .profile-page .cover .profile-data {
-        left:0; top:130%;
+    .profile-page .top-profile .edit-profile {
+        right:2%; top:85%
     }
 
 }
@@ -423,40 +404,28 @@ label {
         margin-top: 80px;
     }
 
-    .profile-page {
-        min-height:420px;
+    .profile-page .top-profile {
+        min-height:350px
     }
 
-    .profile-page .cover .cover-img img {
-        height: 200px;
+    .profile-page .top-profile .cover img {
+        height: 250px;
     }
 
-    .profile-page .cover .profile-pic {
-        left:10%; bottom:-30%;
+    .profile-page .top-profile .profile-pic {
+        top:40%; left:2%;
     }
 
-    .profile-page .cover .profile-pic img {
-        height:100px; width:100px;
+    .profile-page .top-profile .profile-pic img {
+        height:170px; width:170px;
     }
 
-    .profile-page .cover .profile-pic-edit {
-        left:20%; top:108%; padding: 8px 10px;
+    .profile-page .top-profile .edit-cover {
+        right:2%; top:60%
     }
 
-    .profile-page .cover .profile-pic-edit .fa-camera {
-        font-size:1rem;
-    }
-
-    .profile-page .cover .edit-cover {
-        top:80%; right:2%;
-    }
-
-    .profile-page .cover .edit-profile {
-        top:110%; right:0
-    }
-
-    .profile-page .cover .profile-data {
-        left:28%; top:110%; right:15%
+    .profile-page .top-profile .edit-profile {
+        right:2%; top:75%
     }
 
 }
@@ -475,40 +444,28 @@ label {
         margin-top: 75px;
     }
 
-    .profile-page {
-        min-height:450px;
+    .profile-page .top-profile {
+        min-height:350px
     }
 
-    .profile-page .cover .cover-img img {
+    .profile-page .top-profile .cover img {
         height: 250px;
     }
 
-    .profile-page .cover .profile-pic {
-        left:10%; bottom:-40%;
+    .profile-page .top-profile .profile-pic {
+        top:40%; left:2%;
     }
 
-    .profile-page .cover .profile-pic img {
-        height:150px; width:150px;
+    .profile-page .top-profile .profile-pic img {
+        height:170px; width:170px;
     }
 
-    .profile-page .cover .profile-pic-edit {
-        left:23%; top:113%; padding: 8px 10px;
+    .profile-page .top-profile .edit-cover {
+        right:2%; top:60%
     }
 
-    .profile-page .cover .profile-pic-edit .fa-camera {
-        font-size:1.5rem;
-    }
-
-    .profile-page .cover .edit-cover {
-        top:85%; right:2%;
-    }
-
-    .profile-page .cover .edit-profile {
-        top:110%; right:0
-    }
-
-    .profile-page .cover .profile-data {
-        left:30%; top:110%; right:15%
+    .profile-page .top-profile .edit-profile {
+        right:2%; top:75%
     }
 
 }
@@ -527,130 +484,102 @@ label {
         margin-top: 80px;
     }
 
-    .profile-page {
-        min-height:510px;
+    .profile-page .top-profile {
+        min-height:400px
     }
 
-    .profile-page .cover .cover-img img {
+    .profile-page .top-profile .cover img {
         height: 300px;
     }
 
-    .profile-page .cover .profile-pic {
-        left:10%; bottom:-50%;
+    .profile-page .top-profile .profile-pic {
+        top:40%; left:2%;
     }
 
-    .profile-page .cover .profile-pic img {
+    .profile-page .top-profile .profile-pic img {
         height:200px; width:200px;
     }
 
-    .profile-page .cover .profile-pic-edit {
-        left:25%; top:115%; padding: 10px;
+    .profile-page .top-profile .edit-cover {
+        right:2%; top:65%
     }
 
-    .profile-page .cover .profile-pic-edit .fa-camera {
-        font-size:2rem;
-    }
-
-    .profile-page .cover .edit-cover {
-        top:85%; right:2%;
-    }
-
-    .profile-page .cover .edit-profile {
-        top:110%; right:0
-    }
-
-    .profile-page .cover .profile-data {
-        left:32%; top:110%; right:15%
+    .profile-page .top-profile .edit-profile {
+        right:2%; top:80%
     }
 
 }
 
-.profile-page .cover {
-    position: relative;
+.profile-page {
+    border-right: 1px solid #EEEEEE; border-left: 1px solid #EEEEEE
 }
 
-.profile-page .cover .cover-img {
+.profile-page .top-profile {
+    position: relative; 
+}
+
+.profile-page .top-profile .cover {
     overflow: hidden;
 }
 
-.profile-page .cover .cover-img img {
-    object-fit:cover; cursor: pointer; transition: transform .4s
+.profile-page .top-profile .cover img {
+    transition: transform .4s;
 }
 
-.profile-page .cover .cover-img img:hover, .profile-page .cover .profile-pic img:hover {
+.profile-page .top-profile .cover img:hover, .profile-page .top-profile .profile-pic img:hover {
     transform: scale(1.3); transform-origin: 50% 50%; filter: brightness(40%);
 }
 
-.profile-page .cover .profile-pic {
+.profile-page .top-profile .profile-pic {
     position: absolute; border: 5px solid white; background: white; border-radius:50%; overflow: hidden;
 }
 
-.profile-page .cover .profile-pic-edit {
-    position: absolute; background: #B2BEB5; border-radius: 50%; cursor: pointer;
+.profile-page .top-profile .profile-pic img {
+    border-radius: 50%; transition: transform .4s
 }
 
-.profile-page .cover .profile-pic-edit .fa-camera {
-    color:white;
-}
-
-.profile-page .cover .profile-pic-edit .dropdown-menu .dropdown-item, .profile-page .cover .edit-cover .dropdown-menu .dropdown-item {
+.profile-page .top-profile .dropdown-menu .dropdown-item {
     color: #525368;
     font-weight: 600;
 }
 
-.profile-page .cover .profile-pic img {
-    border-radius: 50%; cursor: pointer; transition: transform .4s
-}
-
-.profile-page .cover .edit-cover {
+.profile-page .top-profile .edit-cover {
     position: absolute;
 }
 
-.profile-page .cover button {
+.profile-page .top-profile button {
     font-weight:600
 }
 
-.profile-page .cover .edit-profile {
-    position: absolute;
+.profile-page .top-profile .edit-profile {
+    position: absolute; 
 }
 
-.profile-page .cover .edit-profile .btn-post {
-    background: #ffee59;
+.profile-page .profile-data {
+    border-bottom: 1px solid #EEEEEE;
 }
 
-.profile-page .cover .edit-profile .btn-post:focus {
-    outline: none;
-}
-
-.profile-page .cover .edit-profile .btn-post:hover {
-    background: #ffee80;
-}
-
-.profile-page .cover .profile-data {
-    position: absolute;
-}
-
-.profile-page .cover .profile-data .user-name {
+.profile-page .profile-data .user-name {
     line-height: 1px
 }
 
-.profile-page .cover .profile-data .user-name h2 {
+.profile-page .profile-data .user-name h2 {
     font-weight: 900
 }
 
-.profile-page .cover .profile-data .user-name span {
+.profile-page .profile-data .user-name span {
     color: #B2BEB5;
 }
 
-.profile-page .cover .profile-data p {
-    
+.profile-page .profile-data p {
+    font-size:medium; font-weight:lighter; color: #525368;
 }
 
-.profile-page .cover .profile-data .user-info .count {
+.profile-page .profile-data .user-data .count {
     font-weight: 600;
 }
 
-.profile-page .cover .profile-data .user-info .mx-2 {
+.profile-page .cover .profile-data .user-data .mx-2 {
     color: #B2BEB5;
 }
 

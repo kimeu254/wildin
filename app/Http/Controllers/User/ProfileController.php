@@ -22,8 +22,7 @@ class ProfileController extends Controller
 
     public function index()
     {
-        $profile = Auth::user()->username;
-        return view('profile.profile', compact('profile'));
+        return view('profile.profile');
     }
 
     public function show($id)
@@ -39,9 +38,6 @@ class ProfileController extends Controller
         $edit = User::where('id', $id)
             ->update([
                 'name' =>  $request->name,
-                'username' =>  $request->username,
-                'email' =>  $request->email,
-                'phone' =>  $request->phone,
                 'date_of_birth' =>  $request->date_of_birth,
                 'profession' =>  $request->profession,
                 'workplace' =>  $request->workplace,
