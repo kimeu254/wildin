@@ -16,9 +16,24 @@
                     <span class="px-1">Edit Cover</span>
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-eye"></i><span class="px-2">View Photo</span></a></li>
-                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-pencil"></i><span class="px-2">Update Photo</span></a></li>
-                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash-can"></i><span class="px-2">Remove Photo</span></a></li>
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa-solid fa-eye"></i>
+                            <span class="px-2">View Photo</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa-solid fa-pencil"></i>
+                            <span class="px-2">Update Photo</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa-solid fa-trash-can"></i>
+                            <span class="px-2">Remove Photo</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
             <div class="edit-profile">
@@ -54,7 +69,7 @@
     </div>
 </div>
 
-<!-- Modal -->
+<!-- Edit Profile Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
       <div class="modal-content">
@@ -67,6 +82,14 @@
             {{ csrf_field() }}
             <input type="hidden" value="" id="id" name="id"/>
             <input type="hidden" value="{{ Auth::user()->id }}" id="id" name="id"/>
+            <div class="form-pic">
+                <div class="modal-cover">
+                    <img id="preview-one" src="{{asset('storage/logos/mailchimp-0qnRfgnZIsI-unsplash (1).jpg')}}" alt="" class="img-fluid w-100">
+                </div>
+                <div class="modal-profile-pic">
+                    <img id="preview" src="https://picsum.photos/200/300" alt="" class="img-fluid">
+                </div>
+            </div>
             <div class="form-group mb-5">
                 <label for="name">Name</label>
                 <input name="name" type="text" class="form-control form-control-lg">
@@ -90,7 +113,10 @@
         </div>
       </div>
     </div>
-  </div>
+</div>
+
+<!-- View Profile Modal -->
+
 @endsection
 
 <script type="text/javascript">
@@ -111,6 +137,8 @@
                 $('[name="bio"]').val(data[0].bio);
                 $('[name="address"]').val(data[0].address);
                 $('[name="date_of_birth"]').val(data[0].date_of_birth);
+                //$('#preview').attr('src', "/storage/posts/" + img);
+                //$('#preview-one').attr('src', "/storage/posts/" + img_one);
                 $('#staticBackdrop').modal('show'); // show bootstrap modal when complete loaded
                 $('.modal-title').text('Edit Profile'); // Set title to Bootstrap modal title
             },
@@ -126,6 +154,7 @@
             }
         });
     }
+    
     function save()
     {
         $('#progress').show();

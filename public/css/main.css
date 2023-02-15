@@ -586,3 +586,24 @@ label {
 hr {
     color: #B2BEB5;
 }
+
+.modal .modal-dialog .modal-content .modal-body .form-pic {
+    position: relative; min-height: 250px
+}
+
+.modal .modal-dialog .modal-content .modal-body .form-pic .modal-cover {
+    overflow: hidden
+}
+
+.modal .modal-dialog .modal-content .modal-body .form-pic .modal-cover img {
+    height: 150px;
+}
+
+.modal .modal-dialog .modal-content .modal-body .form-pic .modal-profile-pic {
+    position: absolute; left:2%; top:35%; border: 5px solid white; background: white; 
+    border-radius:50%; overflow: hidden;
+}
+
+.modal .modal-dialog .modal-content .modal-body .form-pic .modal-profile-pic img {
+    border-radius: 50%; height:120px; width:120px;
+}
